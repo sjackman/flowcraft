@@ -433,3 +433,27 @@ class DownsampleFastq(Process):
         self.status_channels = [
             "downsample_fastq"
         ]
+
+class Porechop(Process):
+    """Porechop trims adapters from Oxford Nanopore reads.
+
+    This process is set with:
+
+        - ``input_type``: fastq
+        - ``output_type``: fastq
+        - ``ptype``: pre_assembly
+    """
+
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+
+        self.input_type = "fastq"
+        self.output_type = "fastq"
+
+        self.directives = {
+            "porechop": {
+                "cpus": 4,
+                "container": "quay.io/biocontainers/porechop",
+                "version": "0.2.3_seqan2.1.1--py36h2d50403_3"
+            }
+        }
