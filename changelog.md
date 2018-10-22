@@ -16,6 +16,7 @@ resolution
 - The `abyss` and `spades` components emit GFA in a secondary channel.
 - The new `bandage` component can accept either FASTA from a primary channel
   or GFA from a secondary channel.
+- The new `unicycler` component can accept long reads from a secondary channel.
 
 ### New components
 
