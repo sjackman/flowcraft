@@ -22,6 +22,7 @@ resolution
 
 - Added component `abyss`.
 - Added component `bandage`.
+- Added component `porechop`.
 - Added component `unicycler`.
 
 ### Minor/Other changes
